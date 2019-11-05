@@ -1,0 +1,12 @@
+# this is only for dev puposes.
+
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+
+COPY . .
+
+CMD [ "npm","run", "start" ]
